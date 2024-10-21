@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Работа с ветками в Git - Системе котроля версий | Dxrkd3v </title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+
+        <link rel="stylesheet" href="../../css/styles.css">
+    </head>
+    <body>
+        <div class="author"> 
+            <a href="/">
+            <img class="author-avatar" src="../../img/ava.jpeg">
+            </a>
+        </div>
+        <div class="clearfix">
+            <div class="col11 mxauto">
+                <div class="flex align-center justify-center">
+                    <a class="Logo no-underline" href="/">
+                        <div class="h2 serif bold black mb0">Dxrkd3v</div>
+                    </a>
+                </div>
+                <div class="mt4 h5 text-center">
+                    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
+                    <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Портфолио</a>
+                    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
+                    <a href="/link/" class="gray no-underline inline-block mx2 mt1 md:mt0">Полезное</a>
+                </div>
+            </div>
+            <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
+                <article>
+                    <div class="post">
+                        <h2>Работа с ветками в Git</h2>
+                        <p class="h5 gray">3 Октября, 2024</p>
+                        <h3>Основные команды для веток в Git</h3>
+                        <p>
+                            В системе контроля версий Git постоянно приходится
+                            создавать и перемещаться по веткам, удалять и сливать. 
+                        </p>
+                        <p>
+                            Еще ветки в Git негласно называют бренчой. 
+                        </p>
+                        <p>
+                            Создадим ветку
+                        </p>
+                        <p>
+                            Команда создает ветку и сразу переключает на нее. 
+                        </p>
+                        <pre>
+<code>  
+    git switch --create [имя-ветки]
+
+</code>
+                        </pre>
+                        <p>
+                            Переключаемся между веток
+                        </p>
+                        <p>
+                            Команда перекинет на уже заранее созданную ветку.
+                            Для создания и переключения веток также можно 
+                            использовать git checkout.
+                        </p>
+                        <pre>
+<code>
+    git switch [имя ветки]
+
+</code>
+                        </pre>
+                        <p>
+                            Выведем список всех веток на локалке
+                        </p>
+                        <pre>
+<code>
+    git branch
+
+</code>
+                        </pre>
+                        <p>
+                            Переименуем ветку
+                        </p>
+                        <pre>
+<code>
+    git branch -m [старое-название-ветки] [новое-название-ветки]
+
+</code>
+                        </pre>
+                        <p>
+                            Пушаем ветку на Github
+                        </p>
+                        <pre>
+<code> 
+    git push origin [имя-ветки]
+
+</code>
+                        </pre>
+                        <p>
+                            Удаляем ветку 
+                        </p>
+                        <p>
+                            Команда удалит ветку на локалке
+                        </p>
+                        <pre>
+<code> 
+    git branch --delete [имя-ветки]
+
+</code>
+                        </pre>
+                        <p>
+                            Если нужно удалить ветку на Github
+                            то поможет следующая команда 
+                        </p>
+                        <pre>
+<code> 
+    git push --delete origin [имя-ветки]
+
+</code>
+                        </pre>
+                        <p>
+                            Слияние ветки 
+                        </p>
+                        <pre>
+<code> 
+    git merge [имя-ветки]
+
+</code>
+                        </pre>
+                        <p>
+                            Перебазируем коммиты. 
+                        </p>
+                        <p>
+                            Команда перекинет все комиты на ту которую указать на 
+                            месте [имя-ветки]
+                        </p>
+                        <pre>
+<code> 
+    git rebase [имя-ветки]
+
+</code>
+                        </pre>
+                        <p>
+                            Создадим точную копию все коммитов
+                        </p>
+                        <p>
+                            Команду часто совмещают с git merge и git rebase, 
+                            чтобы сохранить линейную историю коммитов.
+                        </p>
+                        <pre>
+<code> 
+    git cherry-pick
+
+</code>
+                        </pre>
+                </article>
+            </main>
+            <div class="mt4 h5 text-center">
+                <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
+                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Портфолио</a>
+                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
+                <a href="/link/" class="gray no-underline inline-block mx2 mt1 md:mt0">Полезное</a>
+            </div>
+            <br>
+        </div>
+    </body>
+</html>

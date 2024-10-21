@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Основные команды для работы в Git - Системе котроля версий | Dxrkd3v </title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+
+        <link rel="stylesheet" href="../../css/styles.css">
+    </head>
+    <body>
+        <div class="author"> 
+            <a href="/">
+            <img class="author-avatar" src="../../img/ava.jpeg">
+            </a>
+        </div>
+        <div class="clearfix">
+            <div class="col11 mxauto">
+                <div class="flex align-center justify-center">
+                    <a class="Logo no-underline" href="/">
+                        <div class="h2 serif bold black mb0">Dxrkd3v</div>
+                    </a>
+                </div>
+                <div class="mt4 h5 text-center">
+                    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
+                    <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Портфолио</a>
+                    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
+                    <a href="/link/" class="gray no-underline inline-block mx2 mt1 md:mt0">Полезное</a>
+                </div>
+            </div>
+            <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
+                <article>
+                    <div class="post">
+                        <h2>Основные команды для работы с Git</h2>
+                        <p class="h5 gray">3 Октября, 2024</p>
+                        <h3>Первоначальная настройка Git</h3>
+                        <p>Укажем имя пользователя</p>
+                        <p>
+                            Задаёт имя пользователя, от которого будут идти коммиты. 
+                            Нужно написать свои данные на латинице. 
+                            Если имя состоит из одного слова, 
+                            кавычки можно не ставить.
+                        </p>
+                        <pre>
+<code>  
+    git config --global user.name "Dxrkd3v"
+
+</code>
+                        </pre>
+                        <p>Укажем почту</p>
+                        <p>
+                            Задаёт почту пользователя. 
+                            Нужно указать тот адрес почты 
+                            который зарегистрирован на GitHub.
+                        </p>
+                        <pre>
+<code>  
+    git config --global user.email "dxrkd3v@ro.ru"
+
+</code>
+                        </pre>
+                        <p>
+                            Посмотрим внесенные изменения
+                        </p>
+                        <p>
+                            Параметры можно посмотреть и в файле с конфигом, 
+                            но этот способ быстрее.
+                        </p>
+                        <pre>
+<code>  
+    git config --list
+
+</code>
+                        </pre>
+                        <h3>Работа с репозиторием</h3>
+                        <p>
+                            Создадим новый репозиторий
+                        </p>
+                        <p>
+                            Инициализирует пустой репозиторий.
+                        </p>
+                        <pre>
+<code> 
+    git init 
+
+</code>
+                        </pre>
+                        <p>
+                            Клонируем репозиторий с GitHub
+                        </p>
+                        <p>
+                            Проект появится в текучей директории.
+                        </p>
+                        <pre>
+<code> 
+    git clone [ссылка на репозиторий]
+
+</code>
+                        </pre>
+                        <p>
+                            Привяжем репозиторий на GitHub с локальной версией
+                        </p>
+                        <pre>
+<code> 
+    git remote add origin [ссылка на репозиторий]
+
+</code>
+                        </pre>
+                        <h3>Работа с изменениями</h3>
+                        <p>
+                            Подтянем изминения
+                        </p>
+                        <p>
+                            Эта команда тенет все изминения в проект из GitHub
+                        </p>
+                        <pre>
+<code> 
+    git pull 
+
+</code>
+                        </pre>
+                        <p>
+                            Посмотрим на статус файлов
+                        </p>
+                        <p>
+                            Показывает какие файлы были удалены, изменены или добавлены
+                            кроме закомиченных. Можно набрать git s если alias прописан. 
+                        </p>
+                        <pre>
+<code> 
+    git status
+
+</code>
+                        </pre>
+                        <p>
+                            Примерный ответ
+                        </p>
+                        <pre>
+<code> 
+    ➜  dxrkd3v git:(main) ✗ git s
+    On branch main
+    Your branch is up to date with 'origin/main'.
+
+</code>
+                        </pre>
+                        <p>
+                            Добавим файлы в индекс
+                        </p>
+                        <p>
+                            Команда добавит все файлы в индекс. 
+                            Если нужно добавить отдельный файл, то 
+                            вместо точки пишем имя файла с расширением.
+                            После добавления в индекс, можно сохраняться. 
+                        </p>
+                        <pre>
+<code> 
+    git add .
+
+</code>
+                        </pre>
+                        <p>
+                            Закомитим изминения
+                        </p>
+                        <p>
+                            Команда зафиксирует изминения. 
+                            Сохранит всю работу.
+                            До выполнения этой команды 
+                            сохранений на локалке не будет. 
+                        </p>
+                        <pre>
+<code> 
+    git commit -m "Комментарий к коммиту"
+
+</code>
+                        </pre>
+                        <p>
+                            Посмотрим на историю коммитов
+                        </p>
+                        <p>
+                            Команда выведет список всех коммитов. 
+                            У этой команды есть разные опции, 
+                            самая используемая из 
+                            них '--oneline'. Она показывает хеш в укороченном формате, 
+                            ветку, в которой сделан коммит, 
+                            а также текст коммита.
+                        </p>
+                        <pre>
+<code> 
+    git log
+
+</code>
+                        </pre>
+                        <p>
+                            Запушим изминения
+                        </p>
+                        <p>
+                            Команда отправит все зафиксированные 
+                            изминения с локалки на GitHub.
+                        </p>
+                        <pre>
+<code> 
+    git push
+
+</code>
+                        </pre>
+                    </div>
+                    <p>
+                        Отменим изменения не добавленные в индекс.
+                    </p>
+                    <pre>
+<code> 
+    git restore [имя-файла]
+
+</code>
+                    </pre>
+                    <p>
+                        Отменим изменения добавленные в индекс. 
+                    </p>
+                    <pre>
+<code> 
+    git reset --hard
+
+</code>
+                    </pre>
+                    <p>
+                        Удаляем коммит. 
+                    </p>
+                    <pre>
+<code> 
+    git revert [хеш-коммита]
+
+</code>
+                    </pre>
+                </article>
+            </main>
+            <div class="mt4 h5 text-center">
+                <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
+                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Портфолио</a>
+                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
+                <a href="/link/" class="gray no-underline inline-block mx2 mt1 md:mt0">Полезное</a>
+            </div>
+            <br>
+        </div>
+    </body>
+</html>

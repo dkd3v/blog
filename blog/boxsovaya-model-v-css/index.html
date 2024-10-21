@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Боксовая модель верстки в CSS | Dxrkd3v </title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+
+        <link rel="stylesheet" href="../../css/styles.css">
+    </head>
+    <body>
+        <div class="author"> 
+            <a href="/">
+            <img class="author-avatar" src="../../img/ava.jpeg">
+            </a>
+        </div>
+        <div class="clearfix">
+            <div class="col11 mxauto">
+                <div class="flex align-center justify-center">
+                    <a class="Logo no-underline" href="/">
+                        <div class="h2 serif bold black mb0">Dxrkd3v</div>
+                    </a>
+                </div>
+                <div class="mt4 h5 text-center">
+                    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
+                    <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Портфолио</a>
+                    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
+                    <a href="/link/" class="gray no-underline inline-block mx2 mt1 md:mt0">Полезное</a>
+                </div>
+            </div>
+            <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
+                <article>
+                    <div class="post">
+                        <h2>Боксовая или блочная модель верстки в CSS</h2>
+                        <p class="h5 gray">11 Октября, 2024</p>
+                        <h3>Бокс или box modal</h3>
+                        <p>
+                            Лекция от HTMLAcademy
+                        </p>
+                        <p>
+                            Каждому элементу на веб-странице 
+                            соответствует прямоугольная область, 
+                            известная как бокс 
+                            (от английского "box" — «коробка»).
+                        </p>
+                        <p>
+                            Бокс включает в себя:
+                        </p>
+                        <ul style="padding-bottom: 30px;">
+                            <li>
+                                Содержимое (content) — 
+                                непосредственно контент элемента;
+                            </li>
+                            <li>
+                                Внутренние отступы (padding) — 
+                                пространство между содержимым и рамкой;
+                            </li>
+                            <li>
+                                Рамка (border) — линия, окружающая 
+                                содержимое и внутренние отступы;
+                            </li>
+                            <li>
+                                Внешние отступы (margin) — 
+                                пространство за пределами рамки, 
+                                отделяющее данный элемент от других.
+                            </li>
+                        </ul>
+                        <img src="../../img/box-model.png" style="border-radius: 20px;">
+                        <p style="padding-top: 30px;">
+                            Внешний вид бокса на странице 
+                            во многом определяется его типом или типом 
+                            его родительского элемента.
+                        </p>
+                        <p>
+                            Блочные боксы начинаются с новой 
+                            строки и занимают всю доступную 
+                            ширину родительского элемента. 
+                            К таким элементам по умолчанию 
+                            относятся теги 'p', 'div' и 'h1'.
+                        </p>
+                        <p>
+                            Строчные боксы размещаются в 
+                            одной строке друг за другом, 
+                            а их ширина зависит от содержимого. 
+                            По умолчанию строчными элементами 
+                            являются теги 'a', 'span' и 'b'.
+                        </p>
+                        <h3>Поток, сетки и макет страницы</h3>
+                        <p>
+                            Взаимодействие боксов между собой и их 
+                            расположение на странице определяется понятием "поток". 
+                            Поток можно контролировать, 
+                            изменяя типы боксов и их свойства по умолчанию.
+                        </p>
+                        <p>
+                            Сетка представляет собой структуру, 
+                            определяющую расположение основных блоков 
+                            на веб-странице. К таким блокам обычно 
+                            относятся шапка, подвал сайта, 
+                            основное содержание, боковая панель, 
+                            а также различные секции и разделы. 
+                            Количество элементов сетки, как правило, 
+                            фиксировано, а их размеры задаются в 
+                            соответствии с макетом.
+                        </p>
+                        <p>
+                            Макет — это графическое представление 
+                            веб-страницы, создаваемое дизайнером. 
+                            Он служит образцом 
+                            для веб-разработчика при верстке страницы.
+                        </p>
+                        <p>
+                            Макеты страниц делают в Figma или в Photoshop
+                        </p>
+                    </div>
+                </article>
+            </main>
+            <div class="mt4 h5 text-center">
+                <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
+                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Портфолио</a>
+                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
+                <a href="/link/" class="gray no-underline inline-block mx2 mt1 md:mt0">Полезное</a>
+            </div>
+            <br>
+        </div>
+    </body>
+</html>

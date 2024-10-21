@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Введение в CSS, селекторы и классы | Dxrkd3v </title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+
+        <link rel="stylesheet" href="../../css/styles.css">
+    </head>
+    <body>
+        <div class="author"> 
+            <a href="/">
+            <img class="author-avatar" src="../../img/ava.jpeg">
+            </a>
+        </div>
+        <div class="clearfix">
+            <div class="col11 mxauto">
+                <div class="flex align-center justify-center">
+                    <a class="Logo no-underline" href="/">
+                        <div class="h2 serif bold black mb0">Dxrkd3v</div>
+                    </a>
+                </div>
+                <div class="mt4 h5 text-center">
+                    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
+                    <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Портфолио</a>
+                    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
+                    <a href="/link/" class="gray no-underline inline-block mx2 mt1 md:mt0">Полезное</a>
+                </div>
+            </div>
+            <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
+                <article>
+                    <div class="post">
+                        <h2>Введение в CSS</h2>
+                        <p class="h5 gray">3 Октября, 2024</p>
+                        <p>
+                            Лекция про селекторы, классы, id и  
+                            вложенность CSS правил. 
+                        </p>
+                        <p>
+                            CSS — это язык, который используется 
+                            для оформления HTML-документов. 
+                            Его синтаксис значительно проще, 
+                            чем у HTML, так как в CSS отсутствуют 
+                            сложные правила, связанные с вложенностью элементов. 
+                            Фактически, CSS — это довольно "плоский" язык, 
+                            где вложенность практически не используется. 
+                            Типичный CSS-файл состоит из последовательности CSS-правил. 
+                            Каждое CSS-правило включает в себя селектор и список 
+                            свойств с соответствующими значениями. 
+                            Вот пример простого CSS-правила:
+                        </p>
+                        <pre>
+<code> 
+    селектор {
+        свойство: значение свойства;
+        свойство: значение свойства;    <-- это CSS правила
+        свойство: значение свойства;    
+    }
+    /*== А это комментарий ==*/
+
+</code>
+                        </pre>
+                        <h3>Селекторы</h3>
+                        <p>
+                            Первая часть CSS-правила — это селектор. 
+                            Он указывает, к какому HTML-тегу или группе тегов 
+                            будет применяться данный набор свойств.
+                        </p>
+                        <p>
+                            Существует множество типов селекторов, 
+                            но наиболее распространенными являются:
+                        </p>
+                        <p>
+                            Селектор по тегу: Применяет стили ко всем 
+                            элементам определенного 
+                            типа например, p, h1, div
+                        </p>
+                        <p>
+                            Селектор по классу: Применяет стили к элементам с 
+                            определенным классом например, .main__page
+                        </p>
+                        <p>
+                            Комбинированные селекторы: 
+                            Также известные как вложенные или 
+                            контекстные селекторы, они позволяют 
+                            применять стили к элементам, 
+                            находящимся внутри других элементов например, div p
+                        </p>
+                        <pre>
+<code>
+    p {...} /* Обращение по тегу */
+    .main__title {...} /* Обращение по классу */
+    p.nav__menu {...} /* Обращение к классу внутри тега */
+    #nav__bar {...} /* Обращение по id */
+    h1#main__title {...} /* Обращение к тегу с id */
+    .header a {...} /* Обращение к тегу, внутри тега с классом */
+    .header.nav__menu {...} /* Обращение к классу, внутри тега с классом */
+
+</code>
+                        </pre>
+                        <h3>Селектор по имени тега</h3>
+                        <p>
+                            Этот тип селекторов является самым базовым. 
+                            Он создается путем указания имени тега без 
+                            угловых скобок < и >. 
+                            Такой селектор выбирает все элементы 
+                            с соответствующим именем тега. 
+                            Например, селектор 'p' выберет все 
+                            элементы с именем 'p', 
+                            то есть все абзацы.
+                        </p>
+                        <p>
+                            Например
+                        </p>
+                        <pre>
+<code>
+    p {                   <-- Обращение ко всем тегам p   
+        color: #ff0000     
+    }
+
+</code>
+                        </pre>
+                        <h3>Селектор по классу</h3>
+                        <p>
+                            Этот тип селектора начинается с точки, 
+                            за которой следует имя класса. 
+                            Он выбирает все элементы, 
+                            у которых значение атрибута class соответствует 
+                            указанному имени класса. 
+                        </p>
+                        <pre>
+<code>
+    .main {             <-- Обращение к классу 
+        color: #ff0000  
+    }
+
+</code>
+                        </pre>
+                        <p>
+                            Можно объединить селекторы по 
+                            тегу и по классу следующим образом: 
+                            `tag.class`. Важно отметить, что между 
+                            тегом и классом не должно быть пробела. 
+                            Такой комбинированный селектор выберет 
+                            только те элементы, которые соответствуют указанному 
+                            тегу и имеют указанный класс.
+                        </p>
+                        <pre>
+<code>
+    p.main__title {         <-- Обращение к тегу p с классом main__title       
+        color: #ff00000 
+    }
+
+</code>
+                        </pre>
+                        <h3>Селектор по id</h3>
+                        <p>
+                            Этот тип селектора функционирует аналогично 
+                            селектору по классу, но начинается с символа 
+                            решётки #, за которым следует имя идентификатора. 
+                            Он выбирает все элементы, у которых значение атрибута id 
+                            соответствует указанному имени идентификатора.
+                        </p>
+                        <pre>
+<code>
+    #nav-list {         <-- Обращение по id      
+        color: #ff0000
+    }
+
+</code>
+                        </pre>
+                        <p>
+                            Селектор оп id тоже можно комбинировать
+                            с селектором по тегу 
+                        </p>
+                        <pre>
+<code>
+    h1#main-title {        <-- Обращение к тегу h1 с id main-title    
+        color: #ff0000
+    }
+</code>
+                        </pre>
+                </article>
+            </main>
+            <div class="mt4 h5 text-center">
+                <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
+                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Портфолио</a>
+                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
+                <a href="/link/" class="gray no-underline inline-block mx2 mt1 md:mt0">Полезное</a>
+            </div>
+            <br>
+        </div>
+    </body>
+</html>
