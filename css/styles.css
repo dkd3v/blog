@@ -120,6 +120,9 @@ nav,
 section {
     display: block;
 }
+a {
+    color: white;
+}
 body {
     line-height: 1;
 }
@@ -155,7 +158,8 @@ table {
 }
 body,
 html {
-    color: #1f1f1f;
+    background-color: black;
+    color: white;
     font-size: 20px;
     line-height: 1.5;
 }
@@ -3995,7 +3999,7 @@ label {
     border-bottom: 1px solid #e1d6b1;
 }
 a {
-    color: #008081;
+    color: white;
     transition: color 0.2s ease-in;
 }
 a:hover {
