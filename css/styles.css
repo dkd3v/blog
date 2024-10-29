@@ -249,6 +249,12 @@ h6 {
 .serif {
     font-family: Charter,"Bitstream Charter","Sitka Text",Cambria,serif;
 }
+.title__center {
+    text-align: center;
+}
+.title__date {
+    text-align: center;
+}
 .h1,
 h1 {
     font-size: 2rem;
