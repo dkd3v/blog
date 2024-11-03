@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="../../css/styles.css">
     </head>
     <body>
-        <div class="author"> 
+        <div class="author">
             <a href="/">
             <img class="author-avatar" src="../../img/ava.jpeg">
             </a>
@@ -30,75 +30,114 @@
                     </a>
                 </div>
                 <div class="mt4 h5 text-center">
-                    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
-                    <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Работы</a>
-                    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
+                    <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+                    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+                    <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+                    <a href="/eng/" class="gray no-underline inline-block mx2 mt1 md:mt0">English</a>
                 </div>
             </div>
             <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
                 <article>
                     <div class="post">
-                        <h2 class="title__center">Свойство justify-content на Flexbox</h2>
+                        <h2 class="title__center">Свойство justify-content во flexbox в CSS</h2>
                         <p class="h5 gray title__date">21 Октября, 2024 </p>
-                        <h3>space-between, space-around, space-evenly</h3>
                         <p>
                             Лекция от HTMLAcademy про justify-content
                         </p>
                         <p>
-                            В Flexbox есть свойства justify-content, 
-                            которые позволяют равномерно 
+                            В Flexbox есть свойства justify-content,
+                            которые позволяют равномерно
                             распределять элементы вдоль главной оси:
                         </p>
                         <ul>
                             <li>
-                                'space-between' — это значение, 
-                                при котором расстояния между 
-                                соседними элементами равны, 
-                                а отступы между элементами и 
+                                'space-between' — это значение,
+                                при котором расстояния между
+                                соседними элементами равны,
+                                а отступы между элементами и
                                 краями контейнера отсутствуют.
                             </li>
                             <li>
-                                'space-around' — это значение, 
-                                при котором расстояния между 
-                                соседними элементами равны, 
-                                а отступы между элементами и 
-                                краями контейнера составляют половину 
+                                'space-around' — это значение,
+                                при котором расстояния между
+                                соседними элементами равны,
+                                а отступы между элементами и
+                                краями контейнера составляют половину
                                 расстояния между соседними элементами.
                             </li>
                             <li>
-                                'space-evenly' — это значение, 
-                                при котором расстояния 
-                                между всеми элементами, 
+                                'space-evenly' — это значение,
+                                при котором расстояния
+                                между всеми элементами,
                                 включая края контейнера, равны.
                             </li>
                         </ul>
                         <p>
-                            Свойство 'justify-content' контролирует 
-                            распределение элементов вдоль главной оси и 
+                            Свойство 'justify-content' контролирует
+                            распределение элементов вдоль главной оси и
                             принимает пять различных значений:
                         </p>
-                        <p>
-                            1) Значение по умолчанию 'flex-start'
-                        </p>
-                        <p>
-                            2) flex-end
-                        </p>
-                        <p>
-                            3) space-between
-                        </p>
-                        <p>
-                            4) space-around
-                        </p>
-                        <p>
-                            5) space-evenly
-                        </p>
+                        <ul>
+                            <li>
+                                Значение по умолчанию "flex-start"
+                                Располгает элементы в начале оси.
+                            </li>
+                        </ul>
+                            <pre><code> justify-content: flex-start;  </code></pre>
+                            <ul>
+                                <li>
+                                    <p>
+                                        "flex-end" распологает
+                                        элементы в конце главной оси.
+                                    </p>
+                                    <p>
+                                        Нужно обратить внимание, что
+                                        "justify-content: flex-end" не изменяет
+                                        порядок элементов,
+                                        в отличие от "flex-direction: row-reverse".
+                                    </p>
+                                </li>
+                            </ul>
+                            <pre><code> justify-content: flex-end;  </code></pre>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p>
+                                    "space-between" расстояния между
+                                    соседними элементами равны, отступы от
+                                    краёв контейнера отсутствуют.
+                                </p>
+                            </li>
+                        </ul>
+                        <pre><code> justify-content: space-between;  </code></pre>
+                        <ul>
+                            <li>
+                                <p>
+                                    "space-around" расстояния между соседними
+                                    элементами равны, отступы от краёв
+                                    контейнера равны половине
+                                    расстояния между элементами.
+                                </p>
+                            </li>
+                        </ul>
+                        <pre><code> justify-content: space-around;  </code></pre>
+                        <ul>
+                            <li>
+                                <p>
+                                    "space-evenly" Расстояния между соседними
+                                    элементами и краями контейнера равны.
+                                </p>
+                            </li>
+                        </ul>
+                        <pre><code> justify-content: space-evenly;  </code></pre>
                     </div>
                 </article>
             </main>
             <div class="mt4 h5 text-center">
-                <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
-                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Работы</a>
-                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
+                <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+                <a href="/eng/" class="gray no-underline inline-block mx2 mt1 md:mt0">English</a>
             </div>
             <br>
             <br>
