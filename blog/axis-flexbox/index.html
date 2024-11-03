@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Поперечная ось во flexbox в CSS | Dxrkd3v</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+
+        <link rel="stylesheet" href="../../css/styles.css">
+    </head>
+    <body>
+        <div class="author">
+            <a href="/">
+            <img class="author-avatar" src="../../img/ava.jpeg">
+            </a>
+        </div>
+        <div class="clearfix">
+            <div class="col11 mxauto">
+                <div class="flex align-center justify-center">
+                    <a class="Logo no-underline" href="/">
+                        <div class="h2 serif bold mb0">Dxrkd3v</div>
+                    </a>
+                </div>
+            </div>
+            <div class="mt4 h5 text-center">
+                <a href="/" class=" no-underline inline-block mx2 mt1 md:mt0">Home</a>
+                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+                <a href="/eng/" class="gray no-underline inline-block mx2 mt1 md:mt0">English</a>
+            </div>
+            <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
+                <article>
+                    <div class="post">
+                        <h2 class="title__center">Поперечная ось во flexbox в CSS</h2>
+                        <p class="h5 gray  title__date">3 Ноября, 2024 </p>
+                        <p>
+                            Лекция из HTML Academy про поперечную ось flexbox в CSS
+                        </p>
+                        <p>
+                            Во флексбоксе вместо направлений «верх» и «низ»
+                            используется понятие «поперечная ось».
+                        </p>
+                        <p>
+                            Вдоль этой оси происходит
+                            «вертикальное» выравнивание элементов.
+                        </p>
+                        <p>
+                            Пример на картинке
+                        </p>
+                        <img src="../axis-flexbox/img/axis-flexbox.png">
+                        <p>
+                            Поперечная ось всегда перпендикулярна
+                            главной оси и поворачивается вместе с ней
+                            если:
+                        </p>
+                        <ul>
+                            <li>
+                                Главная ось направлена горизонтально,
+                                то поперечная ось смотрит вниз.
+                            </li>
+                            <li>
+                                Главная ось направлена вертикально,
+                                то поперечная ось смотрит направо
+                            </li>
+                        </ul>
+                        <p>
+                            Это поведение может показаться не совсем интуитивным,
+                            и к нему нужно привыкнуть.
+                        </p>
+                        <p>
+                            В результате поперечная
+                            ось никогда не направлена вверх или влево.
+                        </p>
+                    </div>
+                </article>
+            </main>
+            <div class="mt4 h5 text-center">
+                <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+                <a href="/eng/" class="gray no-underline inline-block mx2 mt1 md:mt0">English</a>
+            </div>
+            <br>
+            <br>
+        </div>
+    </body>
+</html>
