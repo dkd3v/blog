@@ -292,6 +292,19 @@ img {
 }
 
 /*=============== ABOUT ===============*/
+.about__container {
+  row-gap: 3.5rem;
+}
+.about__data {
+  text-align: center;
+}
+.about__description {
+  margin-bottom: 2.5rem;
+}
+.about__img {
+  width: 280px;
+  justify-self: center;
+}
 
 
 /*=============== FAVORITE ===============*/
