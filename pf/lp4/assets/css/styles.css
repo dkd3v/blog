@@ -352,7 +352,35 @@ img {
 }
 
 /*=============== MODEL ===============*/
+.model__container {
+  padding-top: 2rem;
+  row-gap: 2.5rem;
+}
 
+.model__content {
+  position: relative;
+  justify-self: center;
+}
+
+.model__img {
+  width: 280px;
+}
+
+.model__tooltip-img {
+  width: 60px;
+}
+
+.model__tooltip-text {
+  background: var(--gradient-color);
+  padding: .25rem .75rem;
+  border-radius: 4rem;
+  color: var(--white-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  position: absolute;
+  transform: translate(60px, -40px);
+  white-space: nowrap;
+}
 
 /*=============== SPONSOR ===============*/
 
