@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Массивы в JavaScript | Array | Dxrkd3v</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+
+        <link rel="stylesheet" href="../../css/styles.css">
+    </head>
+    <body>
+        <div class="author">
+            <a href="/">
+            <img class="author-avatar" src="../../img/ava.jpeg">
+            </a>
+        </div>
+        <div class="clearfix">
+            <div class="col11 mxauto">
+                <div class="flex align-center justify-center">
+                    <a class="Logo no-underline" href="/">
+                        <div class="h2 serif bold mb0">Dxrkd3v</div>
+                    </a>
+                </div>
+            </div>
+            <div class="mt4 h5 text-center">
+                <a href="/" class=" no-underline inline-block mx2 mt1 md:mt0">Home</a>
+                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+                <a href="/eng/" class="gray no-underline inline-block mx2 mt1 md:mt0">English</a>
+            </div>
+            <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
+                <article>
+                    <div class="post">
+                        <h2 class="title__center">Массивы или Array в JavaScript</h2>
+                        <p class="h5 gray  title__date">17 Ноября, 2024 </p>
+                        <p>
+                            Task в RS School по JavaScript про Массивы
+                        </p>
+                        <p>
+                            Для хранения упорядоченных наборов 
+                            данных используется специальная структура, 
+                            называемая массивом (Array).
+                        </p>
+                        <h3>
+                            Создание массива
+                        </h3>
+                        <p>
+                            Для создания пустого массива можно 
+                            использовать два варианта синтаксиса:
+                        </p>
+                        <pre>
+<code>let arr = new Array();
+let arr = [];
+</code>
+                        </pre>
+                        <p>
+                            Как правило, предпочтение 
+                            отдают второму варианту синтаксиса. 
+                            В квадратных скобках можно задать 
+                            начальные значения элементов:
+                        </p>
+                        <pre>
+<code>let fruits = ["Яблоко", "Апельсин", "Слива"];  </code>
+                        </pre>
+                        <p>
+                            Нумерация элементов массива 
+                            начинается с нуля.
+                        </p>
+                        <p>
+                            Чтобы получить элемент, 
+                            нужно указать его индекс 
+                            в квадратных скобках:
+                        </p>
+                        <pre>
+<code class="language-javascript">let fruits = ["Яблоко", "Апельсин", "Слива"];  
+
+console.log( fruits[0] ); // Яблоко
+console.log( fruits[1] ); // Апельсин
+console.log( fruits[2] ); // Слива
+</code>
+                        </pre>
+                        <p>
+                            Элемент массива можно 
+                            заменить следующим образом:
+                        </p>
+                        <pre>
+<code class="language-javascript">fruits[2] = 'Груша'; 
+// массив стал таким:
+fruits = ["Яблоко", "Апельсин", "Груша"]    
+</code>
+                        </pre>
+                        <p>
+                            Так же можно добавить элемент 
+                            в уже существующий массив:
+                        </p>
+                        <pre>
+<code>fruits[3] = 'Лимон'; 
+// теперь массив выглядит так
+fruits = ["Яблоко", "Апельсин", "Груша", "Лимон"]    
+</code>
+                        </pre>
+                        <p>
+                            Общее количество элементов которое содержит массив, 
+                            можно вывести с помощью свойства 'length':
+                        </p>
+                        <pre>
+<code>let fruits = ["Яблоко", "Апельсин", "Слива"];   
+
+console.log( fruits.length ); // 3
+</code>
+                        </pre>
+                        <p>
+                            Вывести все данные из массива можно через 
+                            'console.log':
+                        </p>
+                        <pre>
+<code>let fruits = ["Яблоко", "Апельсин", "Слива"];
+
+console.log( fruits ); // Яблоко, Апельсин, Слива
+</code>
+                        </pre>
+                        <p>
+                            Массив может содержать элементы различных типов.
+                        </p>
+                        <p>
+                            Пример:
+                        </p>
+                        <pre>
+<code>// элементы разных типов
+let arr = [ 'Яблоко', { name: 'Джон' }, true, function() { alert('привет'); } ];   
+    
+// получение элемента с индексом 1 (объект) и вывод его свойства
+console.log( arr[1].name ); // Джон
+    
+// получение элемента с индексом 3 (функция) и её выполнение
+arr[3](); // привет
+</code>
+                        </pre>
+                    </div>
+                </article>
+            </main>
+            <div class="mt4 h5 text-center">
+                <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+                <a href="/eng/" class="gray no-underline inline-block mx2 mt1 md:mt0">English</a>
+            </div>
+            <br>
+            <br>
+        </div>
+    </body>
+</html>
