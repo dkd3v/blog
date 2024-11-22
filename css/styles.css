@@ -1,5 +1,6 @@
 /*== Добавим аватар ==*/
 .author {
+    font-family: "JetBrains Mono";
     text-align: center;
     margin-top: 20px;
     margin-bottom: 5px;
@@ -171,7 +172,7 @@ html {
 }
 body {
     -webkit-font-smoothing: antialiased;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica","Arial",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family: "JetBrains Mono", monospace;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
 }
@@ -244,10 +245,10 @@ h6 {
     -webkit-font-smoothing: initial;
     line-height: 1.25;
     margin: 2rem 0 0.75rem;
-    font-family: Charter,"Bitstream Charter","Sitka Text",Cambria,serif;
+    font-family: "JetBrains Mono", monospace;
 }
 .serif {
-    font-family: Charter,"Bitstream Charter","Sitka Text",Cambria,serif;
+    font-family: "JetBrains Mono", monospace;
 }
 .title__center {
     text-align: center;
@@ -3535,9 +3536,9 @@ h6 {
 .clearfix:after {
     clear: both;
 }
-.clearfix {
-    *zoom: 1;
-}
+/*.clearfix {
+    /*zoom: 1;
+}*/
 .flex {
     display: flex;
 }
@@ -3787,7 +3788,7 @@ h6 {
     height: auto;
     border: 1px solid rgba(0,0,0,0);
     vertical-align: middle;
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
     color: inherit;
     color: #fcfffd;
     text-align: center;
