@@ -3536,9 +3536,9 @@ h6 {
 .clearfix:after {
     clear: both;
 }
-/*.clearfix {
-    /*zoom: 1;
-}*/
+.clearfix {
+    zoom: 1;
+}
 .flex {
     display: flex;
 }
@@ -3788,7 +3788,7 @@ h6 {
     height: auto;
     border: 1px solid rgba(0,0,0,0);
     vertical-align: middle;
-    /* -webkit-appearance: none; */
+    /*-webkit-appearance: none;*/
     color: inherit;
     color: #fcfffd;
     text-align: center;
@@ -4034,4 +4034,3 @@ a:hover {
         max-width: 50%;
     }
 }
-/*# sourceMappingURL=styles.css.map */
