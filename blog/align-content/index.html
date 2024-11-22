@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Свойство align-content и выравнивание строк flex-контейнера | Dxrkd3v</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <link rel="stylesheet" href="../../css/styles.css" />
+  </head>
+  <body>
+    <div class="author">
+      <a href="/">
+        <img class="author-avatar" src="../../img/ava.jpeg" />
+      </a>
+    </div>
+    <div class="clearfix">
+      <div class="col11 mxauto">
+        <div class="flex align-center justify-center">
+          <a class="Logo no-underline" href="/">
+            <div class="h2 serif bold mb0">Dxrkd3v</div>
+          </a>
+        </div>
+      </div>
+      <div class="mt4 h5 text-center">
+        <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+      <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
+        <article>
+          <div class="post">
+            <h2 class="title__center">
+              Свойство align-content и выравнивание строк flex-контейнера
+            </h2>
+            <p class="h5 gray title__date">23 Ноября, 2024</p>
+            <p>Лекция в HTML Academy про align-content</p>
+            <p>
+              Свойство "justify-content" управляет распределением флекс-элементов вдоль главной оси,
+              а "align-content" — выравниванием рядов флекс-элементов вдоль поперечной оси. Оба
+              свойства имеют схожие значения:
+            </p>
+            <p></p>
+            <ul>
+              <li>
+                <p>"flex-start"</p>
+              </li>
+              <li>
+                <p>"flex-end"</p>
+              </li>
+              <li>
+                <p>"center"</p>
+              </li>
+              <li>
+                <p>"space-between"</p>
+              </li>
+              <li>
+                <p>
+                  "stretch" - доступно только для "align-content" и является значением по умолчанию.
+                </p>
+              </li>
+            </ul>
+            <p>
+              Свойство "align-content" переопределяет значение "align-items", которое управляет
+              выравниванием отдельных флекс-элементов вдоль поперечной оси. Это происходит как для
+              одного ряда флекс-элементов, так и для нескольких рядов.
+            </p>
+            <p>
+              Однако есть один нюанс: "align-content" перестаёт работать, если для флекс-контейнера
+              установлено свойство "flex-wrap: nowrap". Это происходит потому, что в таком случае
+              высота строки равна высоте флекс-контейнера, и на поперечной оси не остаётся
+              свободного пространства.
+            </p>
+            <p>
+              В результате "align-content" не может применяться. Вместо этого будут работать
+              свойства "align-items" и "align-self", если размеры флекс-элементов позволяют, и мы
+              увидим результат их выравнивания.
+            </p>
+            <h3>Свойство align-content: stretch и align-items</h3>
+            <p>
+              Когда одновременно задаются свойства "align-items" и "align-content", "align-items" не
+              отключается полностью, а может влиять на отображение флекс-элементов внутри рядов.
+            </p>
+            <p>
+              Это особенно заметно, когда для "align-content" используется значение по умолчанию —
+              "stretch". В этом случае ряды флекс-элементов растягиваются, занимая всё доступное
+              пространство поперечной оси, а оставшееся свободное место между рядами делится
+              поровну.
+            </p>
+            <p>Поведение строк при "align-content: stretch" зависит от значения "align-items":</p>
+            <ul>
+              <li>
+                <p>
+                  Если "align-items" имеет значение "stretch", элементы внутри строк растягиваются
+                  на всю высоту своей строки.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Если значение "align-items" отлично от "stretch", элементы внутри строк сжимаются
+                  под своё содержимое и выравниваются в строках в соответствии с заданным значением
+                  "align-items" (например, "flex-start", "center", "flex-end" и т.д.).
+                </p>
+              </li>
+            </ul>
+            <p>
+              Таким образом, "align-items" продолжает влиять на выравнивание элементов внутри строк,
+              даже если "align-content" установлено на "stretch".
+            </p>
+            <h3>Свойство order, порядковый номер flex-элемента</h3>
+            <p>
+              Еще одно свойство - это "order", которое определяет порядковый номер флекс-элемента.
+            </p>
+            <pre>
+<code class="language-css">.flex-element {
+// этот элемент станет отображаться первым в контейнере
+order: -1; 
+}
+</code>
+            </pre>
+            <p>
+              По умолчанию порядковый номер флекс-элементов равен "0", и они сортируются по
+              возрастанию этого номера.
+            </p>
+            <p>
+              Это свойство очень полезно, так как позволяет изменять порядок следования
+              флекс-элементов в потоке, не изменяя при этом HTML-код.
+            </p>
+          </div>
+        </article>
+      </main>
+      <div class="mt4 h5 text-center">
+        <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+      <br />
+      <br />
+    </div>
+  </body>
+</html>
