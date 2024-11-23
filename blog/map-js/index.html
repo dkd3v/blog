@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Map в JavaScript | Dxrkd3v</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <link rel="stylesheet" href="../../css/styles.css" />
+  </head>
+  <body>
+    <div class="author">
+      <a href="/">
+        <img class="author-avatar" src="../../img/ava.jpeg" />
+      </a>
+    </div>
+    <div class="clearfix">
+      <div class="col11 mxauto">
+        <div class="flex align-center justify-center">
+          <a class="Logo no-underline" href="/">
+            <div class="h2 serif bold mb0">Dxrkd3v</div>
+          </a>
+        </div>
+      </div>
+      <div class="mt4 h5 text-center">
+        <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+      <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
+        <article>
+          <div class="post">
+            <h2 class="title__center">Map в JavaScript</h2>
+            <p class="h5 gray title__date">23 Ноября, 2024</p>
+            <p>Task в RS School по JavaScript про Map</p>
+            <p>
+              Для работы со сложными структурами данных, такими как массивы и объкты, принято
+              использовать Map и Set
+            </p>
+            <p>
+              Map — это коллекция, предназначенная для хранения данных любого типа в виде пар [ключ,
+              значение].
+            </p>
+            <p>
+              Каждое значение сохраняется по уникальному ключу, который затем используется для
+              доступа к этому значению. При этом ключи также могут быть любого типа.
+            </p>
+            <p>Методы и свойства Map</p>
+            <ul>
+              <li>
+                <p>new Map() &lsaquo; создаёт коллекцию</p>
+              </li>
+              <li>
+                <p>map.set(key, value) &lsaquo; записывает по ключу "key" значение "value"</p>
+              </li>
+              <li>
+                <p>
+                  map.get(key) &lsaquo; возвращает значение по ключу или "undefined", если ключ
+                  "key" отсутствует.
+                </p>
+              </li>
+              <li>
+                <p>
+                  map.has(key) &lsaquo; озвращает "true", если ключ "key" присутствует в коллекции,
+                  иначе "false".
+                </p>
+              </li>
+              <li>
+                <p>
+                  map.delete(key) &lsaquo; удаляет элемент (пару [ключ/значение]) по ключу "key"
+                </p>
+              </li>
+              <li>
+                <p>map.clear() &lsaquo; очищает коллекцию от всех элементов.</p>
+              </li>
+              <li>
+                <p>map.size &lsaquo; возвращает текущее количество элементов.</p>
+              </li>
+            </ul>
+            <p>Пример использования</p>
+            <pre>
+<code>let map = new Map();
+
+map.set("1", "string1");    // строка в качестве ключа
+map.set(1, "number1");      // цифра как ключ
+map.set(true, "boolean1");  // булево значение как ключ
+                
+// помните, обычный объект Object приводит ключи к строкам?
+// Map сохраняет тип ключей, так что в этом случае сохранится 2 разных значения:      
+console.log(map.get(1)); // "number1"
+console.log(map.get("1")); // "string1"
+                
+console.log(map.size); // 3
+</code>
+            </pre>
+            <p>
+              Как мы видим, в отличие от объектов, ключи в "Map" не приводятся к строкам. Это
+              позволяет использовать любые типы данных в качестве ключей.
+            </p>
+            <p class="gray">
+              Использование map[key] не является корректным способом работы с Map. Хотя map[key]
+              может работать, например, мы можем установить map[key] = 2, в этом случае map будет
+              рассматриваться как обычный JavaScript-объект, что приводит к всем соответствующим
+              ограничениям (например, ключи будут приводиться к строкам и т.д.).
+            </p>
+            <p class="gray">
+              Поэтому для работы с Map следует использовать специальные методы, такие как set, get и
+              другие.
+            </p>
+            <p>Map может использовать объекты в качестве ключей.</p>
+            <pre>
+<code>let john = { name: "John" };
+
+// давайте сохраним количество посещений для каждого пользователя     
+let visitsCountMap = new Map();
+                
+// объект john - это ключ для значения в объекте Map
+visitsCountMap.set(john, 123);
+                
+console.log(visitsCountMap.get(john)); // 123
+</code>
+            </pre>
+            <p>
+              Использование объектов в качестве ключей — одна из наиболее заметных и важных функций
+              Map. Это невозможно сделать с помощью обычных объектов. В объектах ключи могут быть
+              только строками или символами, но мы не можем использовать другой объект в качестве
+              ключа.
+            </p>
+            <p>Пример использования объекта в качестве ключа</p>
+            <pre>
+              <code>let john = { name: "John" };
+let ben = { name: "Ben" };
+
+let visitsCountObj = {}; // попробуем использовать объект
+
+visitsCountObj[ben] = 234; // пробуем использовать объект ben в качестве ключа
+visitsCountObj[john] = 123; // пробуем использовать объект john в качестве ключа, при этом объект ben будет замещён
+
+// Вот что там было записано!
+console.log( visitsCountObj["[object Object]"] ); // 123
+              </code>
+            </pre>
+            <p>
+              Поскольку visitsCountObj является объектом, он преобразует все ключи типа Object,
+              такие как john и ben, в одну и ту же строку "[object Object]". Это, очевидно, не то,
+              чего мы хотим.
+            </p>
+          </div>
+        </article>
+      </main>
+      <div class="mt4 h5 text-center">
+        <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+      <br />
+      <br />
+    </div>
+  </body>
+</html>
