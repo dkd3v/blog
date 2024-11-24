@@ -185,7 +185,6 @@ code {
 }
 pre code {
     padding: 0.5rem;
-    white-space: pre;
     overflow: auto;
     display: block;
     margin-bottom: 16px;
