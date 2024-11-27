@@ -1,120 +1,98 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Свойство "flex-direction" во flexbox в CSS | Dxrkd3v</title>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
-        <script>
-            hljs.highlightAll();
-        </script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Свойство "flex-direction" во flexbox в CSS | Dxrkd3v</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
 
-        <link rel="stylesheet" href="../../css/styles.css">
-    </head>
-    <body>
-        <div class="author">
-            <a href="/">
-            <img class="author-avatar" src="../../img/ava.jpeg">
-            </a>
+    <link rel="stylesheet" href="../../css/styles.css" />
+  </head>
+  <body>
+    <div class="author">
+      <a href="/">
+        <img class="author-avatar" src="../../img/ava.jpeg" />
+      </a>
+    </div>
+    <div class="clearfix">
+      <div class="col11 mxauto">
+        <div class="flex align-center justify-center">
+          <a class="Logo no-underline" href="/">
+            <div class="h2 serif bold mb0">Dxrkd3v</div>
+          </a>
         </div>
-        <div class="clearfix">
-            <div class="col11 mxauto">
-                <div class="flex align-center justify-center">
-                    <a class="Logo no-underline" href="/">
-                        <div class="h2 serif bold mb0">Dxrkd3v</div>
-                    </a>
-                </div>
-            </div>
-            <div class="mt4 h5 text-center">
-                <a href="/" class=" no-underline inline-block mx2 mt1 md:mt0">Home</a>
-                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
-                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
-                <a href="/eng/" class="gray no-underline inline-block mx2 mt1 md:mt0">English</a>
-            </div>
-            <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
-                <article>
-                    <div class="post">
-                        <h2 class="title__center">Свойство "flex-direction" во flexbox в CSS</h2>
-                        <p class="h5 gray  title__date">3 Ноября, 2024 </p>
-                        <p>
-                            Лекция из HTML Academy про свойство "flex-direction"
-                        </p>
-                        <p>
-                            В стандартной блочной модели направления «влево»,
-                            «вправо», «вверх» и «вниз» фиксированы.
-                        </p>
-                        <p>
-                            Включаем flex
-                        </p>
-                        <pre><code> display: flex;</code></pre>
-                        <p>
-                            Однако внутри флекс-контейнера
-                            эти понятия могут меняться,
-                            так как в нем можно изменить
-                            обычное направление потока элементов.
-                        </p>
-                        <p>
-                        Меняем направление
-                        </p>
-                        <pre><code> flex-direction: row; // Значение по умолчанию   </code></pre>
-                        <p>
-                            Во флексбоксе вместо направлений
-                            «лево» и «право» используется понятие
-                            «главная ось». Поток флекс-элементов проходит вдоль
-                            главной оси от её начала к её концу.
-                        </p>
-                        <p>
-                            Наглядный пример из сайта HTML Academy:
-                        </p>
-                        <img src="../flex-direction/img/flexbox.png">
-                        <p>
-                            По умолчанию главная ось направлена
-                             слева направо, но её можно изменить
-                             в любом направлении с помощью свойства "flex-direction",
-                            которое применяется к флекс-контейнеру.
-                        </p>
-                        <p>
-                            Значения свойства "flex-direction":
-                        </p>
-                        <ul>
-                            <li>
-                                "row" — значение по умолчанию,
-                                главная ось направлена слева направо.
-                            </li>
-                            <li>
-                                "column" — главная ось
-                                направлена сверху вниз.
-                            </li>
-                            <li>
-                                "row-reverse" — главная ось
-                                направлена справа налево.
-                            </li>
-                            <li>
-                                "column-reverse" — главная
-                                ось направлена снизу вверх.
-                            </li>
-                        </ul>
-                        <p>
-                            Флекс-элементы всегда
-                            располагаются вдоль главной оси,
-                            независимо от её направления.
-                        </p>
-                    </div>
-                </article>
-            </main>
-            <div class="mt4 h5 text-center">
-                <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
-                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
-                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
-                <a href="/eng/" class="gray no-underline inline-block mx2 mt1 md:mt0">English</a>
-            </div>
-            <br>
-            <br>
-        </div>
-    </body>
+      </div>
+      <div class="mt4 h5 text-center">
+        <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+      <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
+        <article>
+          <div class="post">
+            <h2 class="title__center">Свойство flex-direction</h2>
+            <p class="h5 gray title__date">3 Ноября, 2024</p>
+            <p>Лекция из HTML Academy про свойство "flex-direction"</p>
+            <p>
+              В стандартной блочной модели направления «влево», «вправо», «вверх» и «вниз»
+              фиксированы.
+            </p>
+            <p>Включаем flex</p>
+            <pre><code>display: flex;</code></pre>
+            <p>
+              Однако внутри флекс-контейнера эти понятия могут меняться, так как в нем можно
+              изменить обычное направление потока элементов.
+            </p>
+            <p>Меняем направление</p>
+            <pre><code>flex-direction: row; // Значение по умолчанию   </code></pre>
+            <p>
+              Во флексбоксе вместо направлений «лево» и «право» используется понятие «главная ось».
+              Поток флекс-элементов проходит вдоль главной оси от её начала к её концу.
+            </p>
+            <p>Наглядный пример из сайта HTML Academy:</p>
+            <img src="../flex-direction/img/flexbox.png" />
+            <p>
+              По умолчанию главная ось направлена слева направо, но её можно изменить в любом
+              направлении с помощью свойства "flex-direction", которое применяется к
+              флекс-контейнеру.
+            </p>
+            <p>Значения свойства "flex-direction":</p>
+            <ul>
+              <li>"row" — значение по умолчанию, главная ось направлена слева направо.</li>
+              <li>"column" — главная ось направлена сверху вниз.</li>
+              <li>"row-reverse" — главная ось направлена справа налево.</li>
+              <li>"column-reverse" — главная ось направлена снизу вверх.</li>
+            </ul>
+            <p>
+              Флекс-элементы всегда располагаются вдоль главной оси, независимо от её направления.
+            </p>
+          </div>
+        </article>
+      </main>
+      <div class="mt4 h5 text-center">
+        <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+        <a href="/eng/" class="gray no-underline inline-block mx2 mt1 md:mt0">English</a>
+      </div>
+      <br />
+      <br />
+    </div>
+  </body>
 </html>
