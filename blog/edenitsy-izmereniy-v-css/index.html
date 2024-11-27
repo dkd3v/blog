@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Единицы измерений в CSS | Dxrkd3v </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
@@ -30,17 +33,17 @@
                     </a>
                 </div>
                 <div class="mt4 h5 text-center">
-                    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
-                    <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Работы</a>
-                    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
+                  <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+                  <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+                  <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+                  <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
                 </div>
-            </div>
-            <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
+               </div>
+               <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
                 <article>
                     <div class="post">
-                        <h2>Единицы измерений в CSS</h2>
-                        <p class="h5 gray">8 Октября, 2024</p>
-                        <h3>px, rem, em, fr, %</h3>
+                        <h2 class="title__center">Единицы измерений в CSS</h2>
+                        <p class="h5 gray title__date">8 Октября, 2024</p>
                         <p>
                             Единицы измерения в CSS 
                             применяются для задания размеров элементов, 
@@ -73,19 +76,14 @@
                             тем выше его плотность и тем более 
                             детализированным будет изображение.
                         </p>
-                        <pre>
-<code> 
-    .content__main {
-        width: 200px;
-        height: 100px;
-        background-color: FFA181;
-        font-size: 24px;
-        padding: 10px;
-        margin: 20px;
-      }
-
-</code>
-                        </pre>
+                        <pre><code>.content__main {
+  width: 200px;
+  height: 100px;
+  background-color: FFA181;
+  font-size: 24px;
+  padding: 10px;
+  margin: 20px;
+}</code></pre>
                         <h3>Размеры шрифта 'rem'</h3>
                         <p>
                             Единица измерения rem зависит от размера 
@@ -97,20 +95,15 @@
                             элементов, где указано 'font-size: 1.5rem;', 
                             размер шрифта будет равен 24px.
                         </p>
-                        <pre>
-<code>
-    .body {
-        font-size: 16px;
-        }
-    h1 {
-        font-size: 2rem; /* 2rem будет равно 32 пикселям (16px * 2) */
-        }
-    p {
-        font-size: 1.5rem; /* 1.5rem будет равно 24 пикселям (16px * 1.5) */
-        }
-
-</code>
-                        </pre>
+                        <pre><code>.body {
+  font-size: 16px;
+}
+h1 {
+  font-size: 2rem; /* 2rem будет равно 32 пикселям (16px * 2) */
+}
+p {
+  font-size: 1.5rem; /* 1.5rem будет равно 24 пикселям (16px * 1.5) */
+}</code></pre>
                         <h3>Размеры шрифта 'em'</h3>
                         <p>
                             Единица измерения em задает размер шрифта, 
@@ -120,20 +113,15 @@
                             то 'font-size: 1.5em;' установит размер 
                             шрифта дочернего элемента на '24px'.
                         </p>
-                        <pre>
-<code>
-    h1 {
-        font-size: 2em;
-        color: #FF0000;
-      }
-    p {
-        font-size: 1.2em;
-        color: #000000;
-        line-height: 1.5em;
-     }                                
-
-</code>
-                        </pre>
+                        <pre><code>h1 {
+  font-size: 2em;
+  color: #FF0000;
+}
+p {
+  font-size: 1.2em;
+  color: #000000;
+  line-height: 1.5em;
+}</code></pre>
                         <h3>Проценты '%'</h3>
                         <p>
                             Проценты определяют размер относительно 
@@ -143,22 +131,17 @@
                             элемента на половину 
                             ширины родительского элемента.
                         </p>
-                        <pre>
-<code>
-    .container {
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-      }
-    .box {
-        width: 50%;
-        height: 200px;
-        background-color: blue;
-        margin: 20px auto;
-      }
-
-</code>
-                        </pre>
+                        <pre><code>.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.box {
+  width: 50%;
+  height: 200px;
+  background-color: blue;
+  margin: 20px auto;
+}</code></pre>
                         <p>
                             Контейнер занимает
                             80% ширины родительского элемента, 
@@ -179,25 +162,21 @@
                         <p>
                             Небольшой пример:
                         </p>
-                        <pre>
-<code>
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-gap: 10px;
-      }
-
-</code>
-                        </pre>
+                        <pre><code>.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 10px;
+}</code></pre>
                 </article>
             </main>
             <div class="mt4 h5 text-center">
-                <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
-                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Работы</a>
-                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
+              <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+              <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+              <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+              <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
             </div>
-            <br>
-            <br>
+            <br />
+            <br />
         </div>
     </body>
 </html>
