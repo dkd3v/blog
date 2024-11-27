@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Массивы в JavaScript | Array | Dxrkd3v</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
@@ -39,7 +42,7 @@
             <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
                 <article>
                     <div class="post">
-                        <h2 class="title__center">Массивы или Array в JavaScript</h2>
+                        <h2 class="title__center">Массивы в JavaScript</h2>
                         <p class="h5 gray  title__date">17 Ноября, 2024 </p>
                         <p>
                             Task в RS School по JavaScript про Массивы
@@ -58,9 +61,7 @@
                         </p>
                         <pre>
 <code>let arr = new Array();
-let arr = [];
-</code>
-                        </pre>
+let arr = [];</code></pre>
                         <p>
                             Как правило, предпочтение 
                             отдают второму варианту синтаксиса. 
@@ -68,8 +69,7 @@ let arr = [];
                             начальные значения элементов:
                         </p>
                         <pre>
-<code>let fruits = ["Яблоко", "Апельсин", "Слива"];  </code>
-                        </pre>
+<code>let fruits = ["Яблоко", "Апельсин", "Слива"];  </code></pre>
                         <p>
                             Нумерация элементов массива 
                             начинается с нуля.
@@ -84,9 +84,7 @@ let arr = [];
 
 console.log( fruits[0] ); // Яблоко
 console.log( fruits[1] ); // Апельсин
-console.log( fruits[2] ); // Слива
-</code>
-                        </pre>
+console.log( fruits[2] ); // Слива</code></pre>
                         <p>
                             Элемент массива можно 
                             заменить следующим образом:
@@ -94,19 +92,14 @@ console.log( fruits[2] ); // Слива
                         <pre>
 <code class="language-javascript">fruits[2] = 'Груша'; 
 // массив стал таким:
-fruits = ["Яблоко", "Апельсин", "Груша"]    
-</code>
-                        </pre>
+fruits = ["Яблоко", "Апельсин", "Груша"]</code></pre>
                         <p>
                             Так же можно добавить элемент 
                             в уже существующий массив:
                         </p>
-                        <pre>
-<code>fruits[3] = 'Лимон'; 
+                        <pre><code>fruits[3] = 'Лимон'; 
 // теперь массив выглядит так
-fruits = ["Яблоко", "Апельсин", "Груша", "Лимон"]    
-</code>
-                        </pre>
+fruits = ["Яблоко", "Апельсин", "Груша", "Лимон"]</code></pre>
                         <p>
                             Общее количество элементов которое содержит массив, 
                             можно вывести с помощью свойства 'length':
@@ -114,9 +107,7 @@ fruits = ["Яблоко", "Апельсин", "Груша", "Лимон"]
                         <pre>
 <code>let fruits = ["Яблоко", "Апельсин", "Слива"];   
 
-console.log( fruits.length ); // 3
-</code>
-                        </pre>
+console.log( fruits.length ); // 3</code></pre>
                         <p>
                             Вывести все данные из массива можно через 
                             'console.log':
@@ -124,9 +115,7 @@ console.log( fruits.length ); // 3
                         <pre>
 <code>let fruits = ["Яблоко", "Апельсин", "Слива"];
 
-console.log( fruits ); // Яблоко, Апельсин, Слива
-</code>
-                        </pre>
+console.log( fruits ); // Яблоко, Апельсин, Слива</code></pre>
                         <p>
                             Массив может содержать элементы различных типов.
                         </p>
@@ -141,9 +130,7 @@ let arr = [ 'Яблоко', { name: 'Джон' }, true, function() { alert('пр
 console.log( arr[1].name ); // Джон
     
 // получение элемента с индексом 3 (функция) и её выполнение
-arr[3](); // привет
-</code>
-                        </pre>
+arr[3](); // привет</code></pre>
                     </div>
                 </article>
             </main>
