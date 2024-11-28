@@ -106,9 +106,7 @@ map.set(true, "boolean1");  // булево значение как ключ
 console.log(map.get(1)); // "number1"
 console.log(map.get("1")); // "string1"
                 
-console.log(map.size); // 3
-</code>
-            </pre>
+console.log(map.size); // 3</code></pre>
             <p>
               Как мы видим, в отличие от объектов, ключи в "Map" не приводятся к строкам. Это
               позволяет использовать любые типы данных в качестве ключей.
@@ -133,9 +131,7 @@ let visitsCountMap = new Map();
 // объект john - это ключ для значения в объекте Map
 visitsCountMap.set(john, 123);
                 
-console.log(visitsCountMap.get(john)); // 123
-</code>
-            </pre>
+console.log(visitsCountMap.get(john)); // 123</code></pre>
             <p>
               Использование объектов в качестве ключей — одна из наиболее заметных и важных функций
               Map. Это невозможно сделать с помощью обычных объектов. В объектах ключи могут быть
@@ -143,8 +139,7 @@ console.log(visitsCountMap.get(john)); // 123
               ключа.
             </p>
             <p>Пример использования объекта в качестве ключа</p>
-            <pre>
-              <code>let john = { name: "John" };
+            <pre><code>let john = { name: "John" };
 let ben = { name: "Ben" };
 
 let visitsCountObj = {}; // попробуем использовать объект
@@ -153,9 +148,7 @@ visitsCountObj[ben] = 234; // пробуем использовать объек
 visitsCountObj[john] = 123; // пробуем использовать объект john в качестве ключа, при этом объект ben будет замещён
 
 // Вот что там было записано!
-console.log( visitsCountObj["[object Object]"] ); // 123
-              </code>
-            </pre>
+console.log( visitsCountObj["[object Object]"] ); // 123</code></pre>
             <p>
               Поскольку visitsCountObj является объектом, он преобразует все ключи типа Object,
               такие как john и ben, в одну и ту же строку "[object Object]". Это, очевидно, не то,
