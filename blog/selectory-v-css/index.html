@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Введение в CSS, селекторы и классы | Dxrkd3v </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
@@ -30,16 +33,17 @@
                     </a>
                 </div>
                 <div class="mt4 h5 text-center">
-                    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
-                    <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Работы</a>
-                    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
-                </div>
+                  <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+                  <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+                  <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+                  <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+              </div>
             </div>
             <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
                 <article>
                     <div class="post">
-                        <h2>Введение в CSS</h2>
-                        <p class="h5 gray">3 Октября, 2024</p>
+                        <h2 class="title__center">Введение в CSS</h2>
+                        <p class="h5 gray title__date">3 Октября, 2024</p>
                         <p>
                             Лекция про селекторы, классы, id и  
                             вложенность CSS правил. 
@@ -57,17 +61,12 @@
                             свойств с соответствующими значениями. 
                             Вот пример простого CSS-правила:
                         </p>
-                        <pre>
-<code> 
-    селектор {
-        свойство: значение свойства;
-        свойство: значение свойства;    <-- это CSS правила
-        свойство: значение свойства;    
-    }
-    /*== А это комментарий ==*/
-
-</code>
-                        </pre>
+                        <pre><code>селектор {
+  свойство: значение свойства;
+  свойство: значение свойства;  &lsaquo; это CSS правила
+  свойство: значение свойства;    
+}
+/*== А это комментарий ==*/</code></pre>
                         <h3>Селекторы</h3>
                         <p>
                             Первая часть CSS-правила — это селектор. 
@@ -94,18 +93,13 @@
                             применять стили к элементам, 
                             находящимся внутри других элементов например, div p
                         </p>
-                        <pre>
-<code>
-    p {...} /* Обращение по тегу */
-    .main__title {...} /* Обращение по классу */
-    p.nav__menu {...} /* Обращение к классу внутри тега */
-    #nav__bar {...} /* Обращение по id */
-    h1#main__title {...} /* Обращение к тегу с id */
-    .header a {...} /* Обращение к тегу, внутри тега с классом */
-    .header.nav__menu {...} /* Обращение к классу, внутри тега с классом */
-
-</code>
-                        </pre>
+                        <pre><code>p {...} /* Обращение по тегу */
+.main__title {...} /* Обращение по классу */
+p.nav__menu {...} /* Обращение к классу внутри тега */
+#nav__bar {...} /* Обращение по id */
+h1#main__title {...} /* Обращение к тегу с id */
+.header a {...} /* Обращение к тегу, внутри тега с классом */
+.header.nav__menu {...} /* Обращение к классу, внутри тега с классом */</code></pre>
                         <h3>Селектор по имени тега</h3>
                         <p>
                             Этот тип селекторов является самым базовым. 
@@ -121,13 +115,9 @@
                             Например
                         </p>
                         <pre>
-<code>
-    p {                   <-- Обращение ко всем тегам p   
-        color: #ff0000     
-    }
-
-</code>
-                        </pre>
+<code>p {  &lsaquo;  Обращение ко всем тегам p   
+  color: #ff0000     
+}</code></pre>
                         <h3>Селектор по классу</h3>
                         <p>
                             Этот тип селектора начинается с точки, 
@@ -136,14 +126,9 @@
                             у которых значение атрибута class соответствует 
                             указанному имени класса. 
                         </p>
-                        <pre>
-<code>
-    .main {             <-- Обращение к классу 
-        color: #ff0000  
-    }
-
-</code>
-                        </pre>
+                        <pre><code>.main {  &lsaquo;  Обращение к классу 
+  color: #ff0000  
+}</code></pre>
                         <p>
                             Можно объединить селекторы по 
                             тегу и по классу следующим образом: 
@@ -154,13 +139,9 @@
                             тегу и имеют указанный класс.
                         </p>
                         <pre>
-<code>
-    p.main__title {         <-- Обращение к тегу p с классом main__title       
-        color: #ff00000 
-    }
-
-</code>
-                        </pre>
+<code>p.main__title { &lsaquo; Обращение к тегу p с классом main__title       
+  color: #ff00000 
+}</code></pre>
                         <h3>Селектор по id</h3>
                         <p>
                             Этот тип селектора функционирует аналогично 
@@ -169,32 +150,24 @@
                             Он выбирает все элементы, у которых значение атрибута id 
                             соответствует указанному имени идентификатора.
                         </p>
-                        <pre>
-<code>
-    #nav-list {         <-- Обращение по id      
-        color: #ff0000
-    }
-
-</code>
-                        </pre>
+                        <pre><code>#nav-list { &lsaquo; Обращение по id      
+  color: #ff0000
+}</code></pre>
                         <p>
                             Селектор оп id тоже можно комбинировать
                             с селектором по тегу 
                         </p>
-                        <pre>
-<code>
-    h1#main-title {        <-- Обращение к тегу h1 с id main-title    
-        color: #ff0000
-    }
-</code>
-                        </pre>
+                        <pre><code>h1#main-title { &lsaquo; Обращение к тегу h1 с id main-title    
+  color: #ff0000
+}</code></pre>
                 </article>
             </main>
             <div class="mt4 h5 text-center">
-                <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
-                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Работы</a>
-                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
-            </div>
+              <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+              <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+              <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+              <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+          </div>
             <br>
             <br>
         </div>
