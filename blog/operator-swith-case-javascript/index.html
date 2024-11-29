@@ -4,7 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Оператор Swith / Case в JavaScript</title>
+        <title>Swith / Case в JavaScript | Dxrkd3v</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
@@ -30,15 +33,17 @@
                     </a>
                 </div>
                 <div class="mt4 h5 text-center">
-                    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
-                    <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Работы</a>
-                    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
-                </div>
+                  <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+                  <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+                  <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+                  <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+              </div>
             </div>
             <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
                 <article>
                     <div class="post">
-                        <h2> Оператор Switch / Case в JavaScript </h2>
+                        <h2 class="title__center">Switch / Case <br />в JavaScript </h2>
+                        <p class="h5 gray title__date">5 марта, 2024</p>
                         <p>
                             Лекция про оператор Switch / Case в JavaScript
                         </p>
@@ -48,43 +53,33 @@
                             предназначенная для определенных сценариев. 
                             Она полезна, когда необходима цепочка if else для проверки на равенство. Например:
                         </p>
-                        <pre>
-<code>
-    if (status === 'processing') {
-    // Делаем раз
-    } else if (status === 'paid') {
-    // Делаем два
-    } else if (status === 'new') {
-    // Делаем три
-    } else {
-    // Делаем четыре
-    }
-
-</code>
-                        </pre>
+                        <pre><code>if (status === 'processing') {
+// Делаем раз
+} else if (status === 'paid') {
+// Делаем два
+} else if (status === 'new') {
+// Делаем три
+} else {
+// Делаем четыре
+}</code></pre>
                         <p>
                             Одна из особенностей этой сложной проверки заключается в том, 
                             что каждая ветка зависит от значения переменной status. 
                             Оператор switch позволяет более кратко и выразительно записать этот код: 
                         </p>
-                        <pre>
-<code>
-    switch (status) {
-    case 'processing': // status === 'processing' (строгое соответствие)
-      // Делаем раз
-      break;
-    case 'paid': // status === 'paid'
-      // Делаем два
-      break;
-    case 'new': // status === 'new'
-      // Делаем три
-      break;
-    default: // else
-      // Делаем четыре
-    }
-
-</code>
-                        </pre>
+                        <pre><code>switch (status) {
+case 'processing': // status === 'processing' (строгое соответствие)
+  // Делаем раз
+  break;
+case 'paid': // status === 'paid'
+  // Делаем два
+  break;
+case 'new': // status === 'new'
+  // Делаем три
+  break;
+default: // else
+  // Делаем четыре
+}</code></pre>
                         <p>
                             Оператор switch является сложной конструкцией из-за следующих компонентов:
                         </p>
@@ -111,21 +106,16 @@
                             Внутри каждого case (и default) 
                             разрешено выполнять произвольный код, открывая широкие возможности для логики программы
                         </p>
-                        <pre>
-<code>
-    switch (count) {
-    case 1:
-      // Делаем что-то полезное
-      break;
-    case 2:
-      // Делаем что-то полезное
-      break;
-    default:
-      // Что-то делаем
-    }
-
-</code>
-                        </pre>
+                        <pre><code>switch (count) {
+case 1:
+  // Делаем что-то полезное
+  break;
+case 2:
+  // Делаем что-то полезное
+  break;
+default:
+  // Что-то делаем
+}</code></pre>
                         <p>
                             Иногда выполнение кода внутри блока case может 
                             привести к завершению функции, содержащей switch. 
@@ -136,30 +126,25 @@
                             Подход первый: объявить переменную перед switch, 
                             заполнить её внутри блока case, а затем вернуть значение этой переменной в конце функции. 
                         </p>
-                        <pre>
-<code>
-    (count) => {
-    // Объявляем переменную
-    let result;
+                        <pre><code>(count) => {
+// Объявляем переменную
+let result;
     
-    // Заполняем
-    switch (count) {
-      case 1:
-        result = 'one';
-        break;
-      case 2:
-        result = 'two';
-        break;
-      default:
-        result = null;
-    }
+// Заполняем
+switch (count) {
+  case 1:
+    result = 'one';
+    break;
+  case 2:
+    result = 'two';
+    break;
+  default:
+    result = null;
+}
     
-    // Возвращаем
-    return result;
-    };
-
-</code>
-                        </pre>
+// Возвращаем
+return result;
+};</code></pre>
                         <p>
                             Более простой и компактный подход заключается в том, 
                             что вместо создания переменной вы можете использовать оператор return внутри 
@@ -167,20 +152,16 @@
                             Поскольку после оператора return 
                             исполнение функции завершается, можно избавиться от использования оператора break: 
                         </p>
-                        <pre>
-<code>
-    (count) => {
-    switch (count) {
-      case 1:
-        return 'one';
-      case 2:
-        return 'two';
-      default:
-        return null;
-        }
-    };
-</code>
-                        </pre>
+                        <pre><code>(count) => {
+switch (count) {
+  case 1:
+    return 'one';
+  case 2:
+    return 'two';
+  default:
+    return null;
+    }
+};</code></pre>
                         <p>
                             Использование оператора switch в коде не является абсолютно необходимым 
                             с технической точки зрения, поскольку можно обойтись без него. 
@@ -192,9 +173,10 @@
                 </article>
             </main>
             <div class="mt4 h5 text-center">
-                <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
-                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Работы</a>
-                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
+              <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+              <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+              <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+              <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
             </div>
             <br>
             <br>
