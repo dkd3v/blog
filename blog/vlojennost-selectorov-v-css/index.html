@@ -4,7 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Введение в CSS, вложенность селекторов | Dxrkd3v </title>
+        <title>Вложенность CSS селекторов | Dxrkd3v </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
@@ -30,19 +33,17 @@
                     </a>
                 </div>
                 <div class="mt4 h5 text-center">
-                    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
-                    <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Работы</a>
-                    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
-                </div>
+                  <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+                  <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+                  <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+                  <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+              </div>
             </div>
             <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
                 <article>
                     <div class="post">
-                        <h2>Вложенность в CSS</h2>
-                        <p class="h5 gray">6 Октября, 2024</p>
-                        <p>
-                            Лекция про вложенность CSS правил. 
-                        </p>
+                        <h2 class="title__center">Вложенность <br>CSS селекторов</h2>
+                        <p class="h5 gray title__date">6 Октября, 2024</p>
                         <h3>Вложенный или контекстный селектор в CSS</h3>
                         <p>
                             Тип обращений который представляет 
@@ -56,14 +57,9 @@
                             тегов с указанным классом, так и внутри вложенных 
                             тегов на любом уровне глубины.
                         </p>
-                        <pre>
-<code> 
-    .nav__list a {        <-- Обращение к тегу a внутри класса .nav__list    
-        font-size: 16px;
-    }
-
-</code>
-                        </pre>
+                        <pre><code>.nav__list a { &lsaquo; Обращение к тегу a внутри класса .nav__list    
+  font-size: 16px;
+}</code></pre>
                         <p>
                             С помощью пробела можно комбинировать 
                             любые типы селекторов. 
@@ -71,14 +67,9 @@
                             все элементы с классом "warning", 
                             которые находятся внутри элементов с классом "text".
                         </p>
-                        <pre>
-<code>
-    .text .warning {    <-- Обращение к селектору 'warning' внутри селектора 'text'     
-        color: red;
-    }
-
-</code>
-                        </pre>
+                        <pre><code class="languages: css">.text .warning { &lsaquo; Обращение к селектору 'warning' внутри селектора 'text'     
+  color: red;
+}</code></pre>
                         <p>
                             В комбинации можно использовать не только два, 
                             но и три, четыре и даже больше селекторов. 
@@ -131,10 +122,11 @@
                 </article>
             </main>
             <div class="mt4 h5 text-center">
-                <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
-                <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Работы</a>
-                <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
-            </div>
+              <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+              <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+              <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+              <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+          </div>
             <br>
             <br>
         </div>
