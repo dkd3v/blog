@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Типы значений в CSS | Dxrkd3v </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
@@ -30,16 +33,17 @@
                     </a>
                 </div>
                 <div class="mt4 h5 text-center">
-                    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
-                    <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Работы</a>
-                    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
+                  <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+                  <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+                  <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+                  <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
                 </div>
             </div>
             <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
                 <article>
                     <div class="post">
-                        <h2>Типы зачений в CSS</h2>
-                        <p class="h5 gray">8 Октября, 2024</p>
+                        <h2 class="title__center">Типы зачений в CSS</h2>
+                        <p class="h5 gray title__date">8 Октября, 2024</p>
                         <h3>Абсолютные значения</h3>
                         <p>
                             Простейший тип значений — это абсолютные величины, 
@@ -47,13 +51,8 @@
                             определения размеров элементов, 
                             текста и других параметров.
                         </p>
-                        <pre>
-<code> 
-    width: 1000px;
-    font-size: 16px;
-
-</code>
-                        </pre>
+                        <pre><code>width: 1000px;
+font-size: 16px;</code></pre>
                     <p>
                         Абсолютные значения обладают 
                         преимуществом в том, что они 
@@ -95,16 +94,11 @@
                         Помимо процентов есть и 
                         другие относительные единицы измерения.
                     </p>
-                    <pre>
-<code> 
-    width: 50%;      /* От ширины родителя */
-    width: 100vw;    /* От ширины вьюпорта */
-    height: 100vh;   /* От высоты вьюпорта */
-    font-size: 2em;  /* От размера шрифта родителя */
-    font-size: 2rem; /* От размера шрифта корневого элемента (html) */
-
-</code>
-                    </pre>
+                    <pre><code>width: 50%;      /* От ширины родителя */
+width: 100vw;    /* От ширины вьюпорта */
+height: 100vh;   /* От высоты вьюпорта */
+font-size: 2em;  /* От размера шрифта родителя */
+font-size: 2rem; /* От размера шрифта корневого элемента (html) */</code></pre>
                     <p>
                         Единицы 'vh' и 'vw' определяют 
                         зависимость от размеров области просмотра 
@@ -139,32 +133,22 @@
                         Они достаточно просты и требуют лишь 
                         постепенного запоминания.
                     </p>
-                    <pre>
-<code>
-    text-transform: uppercase;
-    text-align: center;
-    display: block;
-    color: red;
-
-</code>
-                    </pre>
+                    <pre><code>text-transform: uppercase;
+text-align: center;
+display: block;
+color: red;</code></pre>
                     <h3>Цветовые значения</h3>
                     <p>
                         Ещё один специфический тип значений — это цвета, 
                         которые могут быть представлены 
                         в нескольких различных формах.
                     </p>
-                    <pre>
-<code>
-    color: #f00;       /* #f  0  0 */
-    color: #ff0000;    /* #ff 00 00 */
-    color: rgb(255, 0, 0);
-    color: rgba(255, 0, 0, 0.5);
-    color: hsl(0, 100%, 50%);
-    color: hsla(0, 100%, 50%, 0.5);
-
-</code>
-                    </pre>
+                    <pre><code>color: #f00;       /* #f  0  0 */
+color: #ff0000;    /* #ff 00 00 */
+color: rgb(255, 0, 0);
+color: rgba(255, 0, 0, 0.5);
+color: hsl(0, 100%, 50%);
+color: hsla(0, 100%, 50%, 0.5);</code></pre>
                     <p>
                         Цвета могут быть представлены в нескольких форматах, 
                         включая шестнадцатеричную запись, rgb и rgba. 
@@ -198,20 +182,15 @@
                         особенно полезными являются 
                         функции calc и linear-gradient.
                     </p>
-                    <pre>
-<code>
-    /* Получает содержимое атрибута */
-    content: attr(href);
+                    <pre><code>/* Получает содержимое атрибута */
+content: attr(href);
 
-    /* Любые расчёты */
-    width: calc(100% - 100px);
+/* Любые расчёты */
+width: calc(100% - 100px);
 
-    /* Линейный градиент */
-    background-image:
-    linear-gradient(45deg, yellow, green);
-
-</code>
-                    </pre>
+/* Линейный градиент */
+background-image:
+linear-gradient(45deg, yellow, green);</code></pre>
                     <p>
                         С помощью функции calc можно 
                         создавать очень сложное поведение. 
@@ -235,24 +214,18 @@
                         или деактивирует определенные CSS-правила в 
                         зависимости от условий, таких как размер экрана.
                     </p>
-                    <pre>
-<code>
-    @font-face {
-        font-family: "Open Sans";
-        src:
-          url("OpenSans-Regular.woff2") format("woff2"),
-          url("OpenSans-Regular.woff") format("woff");
-      }
-      
-      @media (max-width: 600px) {
-        .sidebar {
-          display: none;
-        }
-      }
-      
+                    <pre><code>@font-face {
+  font-family: "Open Sans";
+  src:
+    url("OpenSans-Regular.woff2") format("woff2"),
+    url("OpenSans-Regular.woff") format("woff");
+}
 
-</code>
-                    </pre>
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+}</code></pre>
                 </article>
             </main>
             <div class="mt4 h5 text-center">
