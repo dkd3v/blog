@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Задание фона в CSS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
         <meta name="description" content="задание фона с помощью CSS.">
         <link
             rel="stylesheet"
@@ -31,16 +34,17 @@
                     </a>
                 </div>
                 <div class="mt4 h5 text-center">
-                    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Главная</a>
-                    <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Работы</a>
-                    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">Обо мне</a>
-                </div>
+                  <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+                  <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+                  <a href="/pf/" class="gray no-underline inline-block mx2 mt1 md:mt0">Works</a>
+                  <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+              </div>
             </div>
             <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
                 <article>
                     <div class="post">
-                        <h2> Задание фона в CSS - Часть 1</h2>
-                        <p class="h5 gray">29 Сентября, 2024</p>
+                        <h2 class="title__center"> Задание фона в CSS <br> Часть 1</h2>
+                        <p class="h5 gray title__center">29 Сентября, 2024</p>
                         <p>
                             Фоновый цвет элемента в CSS устанавливается с 
                             использованием свойства background-color.
@@ -52,13 +56,9 @@
                             таких как red или green.
                         </p>
 <pre>
-<code>
-    body__main {
-        background-color: #ff0000;
-    }
-    
-</code>
-</pre>
+<code>body__main {
+  background-color: #ff0000;
+}</code></pre>
                         <h2>Свойство background-image</h2>
                         <p>
                             Фоновое изображение можно установить с помощью 
@@ -66,13 +66,9 @@
                             Для этого используется следующий синтаксис:
                         </p>
 <pre>
-<code>
-    body__main {
-        background-image: url("адрес-картинки");    
-    }
-
-</code>
-</pre>
+<code>body__main {
+  background-image: url("адрес-картинки");    
+}</code></pre>
                         <p>
                             Адрес изображения должен быть указан внутри функции url("..."). 
                             Адреса фоновых изображений аналогичны адресам обычных изображений.
@@ -124,17 +120,11 @@
                         </p>
                         <p>
                             Примеры использования свойства:
-                        </p>
-<pre>
-<code> 
-    background-position: 50% 50%; /* картинка будет по центру */
-    background-position: right bottom; /* правый нижний угол */
-    background-position: 50px 100px; /* отступ 50px от левого края и 100px от верхнего */
-    background-position: 0 100%; /* левый нижний угол */
-    background-position: left bottom; /* левый нижний угол */
-
-</code>
-</pre>
+                        </p><pre><code>background-position: 50% 50%; /* картинка будет по центру */
+background-position: right bottom; /* правый нижний угол */
+background-position: 50px 100px; /* отступ 50px от левого края и 100px от верхнего */
+background-position: 0 100%; /* левый нижний угол */
+background-position: left bottom; /* левый нижний угол */</code></pre>
                         <p>
                             Результаты примеров:
                         </p>
