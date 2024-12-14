@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Свойство Display в CSS | Dxrkd3v</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <link rel="stylesheet" href="../../css/styles.css" />
+  </head>
+  <body>
+    <div class="author">
+      <a href="/">
+        <img class="author-avatar" src="../../img/ava.jpeg" />
+      </a>
+    </div>
+    <div class="clearfix">
+      <div class="col11 mxauto">
+        <div class="flex align-center justify-center">
+          <a class="Logo no-underline" href="/">
+            <div class="h2 serif bold mb0">Dxrkd3v</div>
+          </a>
+        </div>
+      </div>
+      <div class="mt4 h5 text-center">
+        <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+      <main class="col12 md:col8 lg:col6 mxauto mt5 pl2 pr2">
+        <article>
+          <div class="post">
+            <h2 class="title__center">Свойство Display в CSS</h2>
+            <p class="h5 gray title__date">14 Декабря, 2024</p>
+            <p>
+                К каждому HTML элементу на странице соответствует прямоугольная область. 
+                Такие области называют боксами. 
+            </p>
+            <p>
+                По умолчанию все HTML элементы обладают определенными боксами. 
+                Но стандартное отображение элементов бокса всегда можно 
+                поменять с помощью CSS-свойства Display. 
+            </p>
+            <p>
+                Тип отображения сразу влияет на две вещи в потоке документа:
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        1 На расположение самого бокса. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        2 На расположение дочерних элементов внутри бокса.
+                    </p>
+                </li>
+            </ul>
+            <p>
+                К примеру у элемента <code class="code_line">li</code> тип отображения по 
+                умолчанию <code class="code_line">display: block</code>
+                Это означает что элементы списка отображаются один под другим на странице. 
+            </p>
+            <pre><code>.li {
+    display: block;
+}</code></pre>
+            <p>
+                Если поменять значение на <code class="code_line">inline</code> элементы списка станут отображаться
+                друг за другом, как будто слова расположенные в предожении. 
+            </p>
+            <pre><code>.li {
+    display: inline;
+}</code></pre>
+            <p>
+                Возможность изменять внешний вид любого элемента 
+                позволяет вам ориентироваться на их семантическое значение при выборе, 
+                не беспокоясь о визуальном представлении. 
+                Внешний вид элементов можно легко настроить.
+            </p>
+            <p>
+                В CSS существует четыре основных типа боксов <code class="code_line">box types</code>, которые определяют, 
+                как элементы отображаются и взаимодействуют с другими элементами:
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        1 &rsaquo; Блочный бокс <code class="code_line">block</code>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        2 &rsaquo; Строчный бокс <code class="code_line">inline</code>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        3 &rsaquo; Строчно-блочный <code class="code_line">inline-block</code>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        4 &rsaquo; Флексы и Гриды <code class="code_line">flex</code> и <code class="code_line">grid</code>
+                    </p>
+                </li>
+            </ol>
+          </div>
+        </article>
+      </main>
+      <div class="mt4 h5 text-center">
+        <a href="/" class="no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+      <br />
+      <br />
+    </div>
+  </body>
+</html>

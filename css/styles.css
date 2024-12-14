@@ -15,6 +15,12 @@
     -webkit-animation: 0.5s ease-in forwards fadein;
     animation: 0.5s ease-in forwards fadein;
   }
+/*== Для однострочного кода в тексте ==*/
+.code_line {
+    white-space: nowrap; 
+    padding: 2px;
+    margin: 1px;
+}
 
 
 
@@ -179,9 +185,9 @@ body {
 code {
     font-family: "JetBrains Mono", monospace;
     font-size: 0.90rem;
-    background: #e1e3e4;
+    background: #1a1b26;
     padding: 0;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 pre code {
     padding: 0.5rem;
